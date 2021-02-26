@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unconvetional Calculator</title>
+    <!--bootstap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!--customized css-->
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <div class="container text-center">
+        <header>
+            <h1>The Unconvetional Calculator</h1>
+        </header>
+    
+        <section id="calculator">
+            <div class="form-group">
+                <input type="number" id="input-number"/>
+            </div>
+            <div id="calc-actions">
+                <button type="button" id="btn-add" class="btn bg-primary btn-lg">+</button>
+                <button type="button" id="btn-subtract" class="btn bg-danger btn-lg">-</button>
+                <button type="button" id="btn-multiply" class="btn bg-success btn-lg">*</button>
+                <button type="button" id="btn-divide" class="btn bg-warning btn-lg">/</button>
+            </div>
+            
+            <section id="results">
+                <h2 id="current-calculation">0</h2>
+                <h2 id="result-area">Result: <span id="current-result">0</span></h2>
+            </section>
+        </section>
+        <!--bootsrap js-->
+        <script src="js/bootstrap.min.js"></script>
+        <!--customized js-->
+        <script src="js/index.js"></script>
+    </div>
+</body>
+</html>
