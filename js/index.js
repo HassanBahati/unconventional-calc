@@ -35,12 +35,15 @@ function add() {
 //event listener to watch and execute the call back function
 addBtn.addEventListener('click', add);
 
-
+//function to subtract numbers 
 function subtract() {
 
 }
 
-
+//function to multiply numbers
+function multiply() {
+  
+}
 
 
 /***
