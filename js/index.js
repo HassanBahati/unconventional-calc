@@ -24,11 +24,11 @@ function getUserNumberInput() {
 
 //generates and writes calculation log
 function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
-  const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`
-   outputResult(currentResult, calcDescription);
+  const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
+  outputResult(currentResult, calcDescription);
 }
 
-//adds numbers 
+//adds numbers
 function add() {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
@@ -36,7 +36,7 @@ function add() {
   createAndWriteOutput('+', initialResult, enteredNumber);
 }
 
-//subtract numbers 
+//subtract numbers
 function subtract() {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
@@ -60,19 +60,14 @@ function divide() {
   createAndWriteOutput('/', initialResult, enteredNumber);
 }
 
- 
-//event listener to watch and execute call back functions 
+//event listener to watch and execute call back functions
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', divide);
-
 
 /* 
 back slash (\) tells js that the character after should be escaped  ie displayed
 parseInt converts a string to a whole number , 
 praseFloat converts to a decimal number
  */
-
- 
-
