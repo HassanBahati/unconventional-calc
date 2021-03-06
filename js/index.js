@@ -42,6 +42,11 @@ function subtract() {
 
 //function to multiply numbers
 function multiply() {
+
+}
+
+//function to divide numbers
+function divide() {
   
 }
 
