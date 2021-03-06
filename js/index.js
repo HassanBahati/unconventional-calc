@@ -17,20 +17,36 @@ const defaultResult = 0;
 //displaying the result ont the part where 0 is on the ui
 let currentResult = defaultResult;
 
-//function that adds numbers
-function add(num1, num2) {
-    const result = num1 + num2;
-    return result;
+//function for getting user input
+function getUserNumberInput() {
+  return parseInt(userInput.value);
 }
-currentResult = add(1, 2);
 
-//text dispalyed fo calculation description
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+//function that adds numbers
+function add() {
+  const enteredNumber = getUserNumberInput();
+  //displaying the numbers on which the operation is occuring
+  const calcDescription = `${currentResult} + ${enteredNumber}`
+  currentResult = currentResult + enteredNumber;
+  //invoking function outputResult
+  outputResult(currentResult, calcDescription); 
+}
 
-//back slash (\) tells js that the character after should be escaped  ie displayed 
+//event listener to watch and execute the call back function
+addBtn.addEventListener('click', add);
 
 
-//invoking function outputResult
-outputResult(currentResult, calculationDescription);
+function subtract() {
+
+}
+
+
+
+
+/***
+ * back slash (\) tells js that the character after should be escaped  ie displayed
+ * parseInt converts a string to a whole number , 
+ * praseFloat converts to a decimal number
+ */
 
 
