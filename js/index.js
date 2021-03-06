@@ -27,6 +27,9 @@ currentResult = add(1, 2);
 //text dispalyed fo calculation description
 let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
 
+//back slash (\) tells js that the character after should be escaped  ie displayed 
+
+
 //invoking function outputResult
 outputResult(currentResult, calculationDescription);
 
