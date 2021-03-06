@@ -17,44 +17,62 @@ const defaultResult = 0;
 //displaying the result ont the part where 0 is on the ui
 let currentResult = defaultResult;
 
-//function for getting user input
+//gets input from input field
 function getUserNumberInput() {
   return parseInt(userInput.value);
+}
+
+//generates and writes calculation log
+function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
+  //displaying the numbers on which the operation is occuring
+  const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`
+   //invoking function outputResult
+   outputResult(currentResult, calcDescription);
 }
 
 //function that adds numbers
 function add() {
   const enteredNumber = getUserNumberInput();
-  //displaying the numbers on which the operation is occuring
-  const calcDescription = `${currentResult} + ${enteredNumber}`
+  const initialResult = currentResult;
   currentResult = currentResult + enteredNumber;
-  //invoking function outputResult
-  outputResult(currentResult, calcDescription); 
+  createAndWriteOutput('+', initialResult, enteredNumber);
 }
-
-//event listener to watch and execute the call back function
-addBtn.addEventListener('click', add);
 
 //function to subtract numbers 
 function subtract() {
-
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult - enteredNumber;
+  createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
 //function to multiply numbers
 function multiply() {
-
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult * enteredNumber;
+  createAndWriteOutput('*', initialResult, enteredNumber);
 }
 
 //function to divide numbers
 function divide() {
-  
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult / enteredNumber;
+  createAndWriteOutput('/', initialResult, enteredNumber);
 }
 
+ 
+//event listener to watch and execute the call back function
+addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', subtract);
+multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', divide);
 
 /***
  * back slash (\) tells js that the character after should be escaped  ie displayed
  * parseInt converts a string to a whole number , 
  * praseFloat converts to a decimal number
  */
-
+ 
 
