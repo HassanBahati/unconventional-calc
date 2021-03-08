@@ -71,3 +71,4 @@ back slash (\) tells js that the character after should be escaped  ie displayed
 parseInt converts a string to a whole number , 
 praseFloat converts to a decimal 
  */
+
